@@ -60,8 +60,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Logica\Weapon\WeaponAttack.cs" />
+    <Compile Include="Assets\Scripts\Logica\Enemy\Move.cs" />
     <Compile Include="Assets\Scripts\Logica\Weapon\ModelWeapone.cs" />
     <Compile Include="Assets\Scripts\Play.cs" />
+    <Compile Include="Assets\Scripts\Logica\Spawn\Spawner.cs" />
     <Compile Include="Assets\Scripts\Logica\Player\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
