@@ -22,4 +22,15 @@ public class WeaponAttack : MonoBehaviour
             Debug.Log("1");
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision != null)
+        {
+            if(collision.GetComponent<Move>() != null)
+            {
+                Debug.Log("hit");
+            }
+        }
+    }
 }
