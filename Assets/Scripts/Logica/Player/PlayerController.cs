@@ -7,11 +7,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _speed;
 
     private Camera _camera;
+    private float _horizontal;
 
     private void Awake() => _camera = FindObjectOfType<Camera>();
-    
-        
-    
+       
 
     private void Update()
     {
@@ -27,20 +26,21 @@ public class PlayerController : MonoBehaviour
 
     public void MoveHero(float Speed)
     {
-        transform.position += new Vector3(Speed, 0, 0) * Time.deltaTime * Input.GetAxisRaw("Horizontal");
+        _horizontal = Input.GetAxisRaw("Horizontal");
+        transform.position += new Vector3(Speed, 0, 0) * Time.deltaTime * _horizontal;
     }
 
     private void FlipHero()
     {
-        if (Input.mousePosition.x < _cameraPosition.x)
+        if (_horizontal < 0)
         {
 
-            GetComponent<SpriteRenderer>().flipX = true;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
-        if (Input.mousePosition.x > _cameraPosition.x)
+        if (_horizontal > 0)
         {
 
-            GetComponent<SpriteRenderer>().flipX = false;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 }
