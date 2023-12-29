@@ -28,7 +28,13 @@ public class WeaponAttack : MonoBehaviour
     {
         if(collision.CompareTag("Enemy"))
         {
-            Debug.Log("hit");
+            //Enemy enemy = collision.GetComponent<Enemy>();
+
+            if(gameObject.GetComponent<Enemy>() != null)
+            {
+                //enemy.TakeDamage(5);
+                Debug.Log("hit");
+            }
         }
     }
 }
