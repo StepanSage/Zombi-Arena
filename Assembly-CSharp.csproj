@@ -62,9 +62,12 @@
     <Compile Include="Assets\Scripts\Logica\Weapon\WeaponAttack.cs" />
     <Compile Include="Assets\Scripts\Logica\Enemy\Move.cs" />
     <Compile Include="Assets\Scripts\Logica\LodingGame\LoadScenes.cs" />
+    <Compile Include="Assets\Scripts\Logica\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Logica\Weapon\ModelWeapone.cs" />
     <Compile Include="Assets\Scripts\Play.cs" />
+    <Compile Include="Assets\Scripts\UI\Resizing.cs" />
     <Compile Include="Assets\Scripts\Logica\Spawn\Spawner.cs" />
+    <Compile Include="Assets\Scripts\UI\ButtonManagar.cs" />
     <Compile Include="Assets\Scripts\Logica\Player\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
