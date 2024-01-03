@@ -61,12 +61,19 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Logica\Weapon\WeaponAttack.cs" />
     <Compile Include="Assets\Scripts\Logica\Enemy\Move.cs" />
+    <Compile Include="Assets\Scripts\Shop\Logica\WeaponInSlot.cs" />
     <Compile Include="Assets\Scripts\Logica\LodingGame\LoadScenes.cs" />
+    <Compile Include="Assets\Scripts\Shop\Logica\ChooseWeapon.cs" />
+    <Compile Include="Assets\Scripts\Logica\Stairs\Ladder.cs" />
     <Compile Include="Assets\Scripts\Logica\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Logica\Weapon\ModelWeapone.cs" />
     <Compile Include="Assets\Scripts\Play.cs" />
     <Compile Include="Assets\Scripts\UI\Resizing.cs" />
+    <Compile Include="Assets\Scripts\Shop\Logica\WeapanInfo.cs" />
     <Compile Include="Assets\Scripts\Logica\Spawn\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Logica\Weapon\WeaponUse.cs" />
+    <Compile Include="Assets\Scripts\HelpElement\OpenHelp.cs" />
+    <Compile Include="Assets\Scripts\Logica\SaveGames\SaveGames.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonManagar.cs" />
     <Compile Include="Assets\Scripts\Logica\Player\PlayerController.cs" />
   </ItemGroup>

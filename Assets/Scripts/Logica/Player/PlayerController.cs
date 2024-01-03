@@ -8,9 +8,14 @@ public class PlayerController : MonoBehaviour
 
     private Camera _camera;
     private float _horizontal;
+    private SpriteRenderer _spriteCharacter;
 
     private void Awake() => _camera = FindObjectOfType<Camera>();
-       
+
+    private void Start()
+    {
+        _spriteCharacter = GetComponent<SpriteRenderer>();
+    }
 
     private void Update()
     {
@@ -34,13 +39,13 @@ public class PlayerController : MonoBehaviour
     {
         if (_horizontal < 0)
         {
-
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            _spriteCharacter.flipX = true;
+            //transform.rotation = Quaternion.Euler(0, 180, 0);
         }
         if (_horizontal > 0)
         {
-
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            _spriteCharacter.flipX = false;
+            //transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 }

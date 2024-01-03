@@ -1,14 +1,13 @@
-using Scripts.Logica.Enemy;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponAttack : MonoBehaviour
 {
     [SerializeField] private Animator _attacAmination;
     [SerializeField] private string _nameAnimation;
+    [SerializeField] private int _damag;
+    [SerializeField] private Collider2D _colliders;
 
-    // Update is called once per frame
     void Update()
     {
         Attack();
@@ -18,23 +17,39 @@ public class WeaponAttack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _attacAmination.Play(_nameAnimation);
-            //_attacAmination.Play("New State");
+            OnCollider();
+            _attacAmination.Play(_nameAnimation);        
             Debug.Log("1");
         }
+        else
+        {
+           
+        }
+    }
+
+    private void OnCollider()
+    {
+        float times = _attacAmination.GetCurrentAnimatorClipInfo(0).Length;
+        StartCoroutine(Delay(times));
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Enemy"))
-        {
-            //Enemy enemy = collision.GetComponent<Enemy>();
-
-            if(gameObject.GetComponent<Enemy>() != null)
+        {      
+            if(collision.GetComponent<Enemy>() != null)
             {
-                //enemy.TakeDamage(5);
-                Debug.Log("hit");
+                collision.GetComponent<Enemy>().TakeDamage(_damag);
             }
         }
+    }
+
+
+    IEnumerator Delay(float time)
+    {
+        _colliders.enabled = true;
+        yield return new WaitForSeconds(time+5f);
+        _colliders.enabled = false;
     }
 }
