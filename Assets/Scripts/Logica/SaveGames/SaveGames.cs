@@ -11,4 +11,14 @@ public static class SaveGames
     {
         PlayerPrefs.SetInt("IDWeapon", CurrentWeaponID);
     }
+
+    public static void Monny(int Count)
+    {
+        PlayerPrefs.SetInt("Monny", Count);
+    } 
+
+    public static void Records(int Count = 0)
+    {
+        PlayerPrefs.SetInt("Records", Count);
+    }
 }

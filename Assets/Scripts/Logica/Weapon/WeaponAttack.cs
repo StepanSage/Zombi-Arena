@@ -7,7 +7,7 @@ public class WeaponAttack : MonoBehaviour
     [SerializeField] private string _nameAnimation;
     [SerializeField] private int _damag;
     [SerializeField] private Collider2D _colliders;
-
+               
     void Update()
     {
         Attack();
@@ -29,7 +29,7 @@ public class WeaponAttack : MonoBehaviour
 
     private void OnCollider()
     {
-        float times = _attacAmination.GetCurrentAnimatorClipInfo(0).Length;
+        float times = 1f;
         StartCoroutine(Delay(times));
        
     }

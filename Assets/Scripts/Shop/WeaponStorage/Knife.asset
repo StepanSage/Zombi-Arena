@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eceed947098053448affed2f5ab6bb86, type: 3}
   m_Name: Knife
   m_EditorClassIdentifier: 
-  _price: 500
-  _isPurchased: 1
+  _price: 10
+  _isPurchased: 0

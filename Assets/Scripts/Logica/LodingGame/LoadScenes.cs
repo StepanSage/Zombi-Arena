@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class LoadScenes : MonoBehaviour
 {
+    public static LoadScenes Instance;
+
     public int _IDSence = 1;
 
     [SerializeField] private Slider _loadBar;
@@ -14,9 +16,14 @@ public class LoadScenes : MonoBehaviour
 
     private void Start()
     {
-        
-        StartCoroutine(LoadSenceCor());
+        Instance = this;
+        Load();
         DontDestroyOnLoad(this);
+    }
+
+    public void Load()
+    {
+        StartCoroutine(LoadSenceCor());
     }
 
     IEnumerator LoadSenceCor()
@@ -31,6 +38,5 @@ public class LoadScenes : MonoBehaviour
             yield return 0;
         }
         gameObject.SetActive(false);
-
     }
 }
