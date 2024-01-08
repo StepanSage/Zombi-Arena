@@ -9,10 +9,20 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private SpriteRenderer _enemy;
 
+    [Header("Monny"),Space(10)]
+    [SerializeField] private MannySystem mannySystem;
+    [SerializeField] private int _minMonnyDrop = 1;
+    [SerializeField] private int _maxMonnyDrop = 10;
+
+    private Score _score;
+    private int countKill = 1;
+
     private void Start()
     {
-        Health = 5;
+        Health = 7;
         _enemy = GetComponent<SpriteRenderer>();
+        mannySystem = FindFirstObjectByType<MannySystem>();
+        _score = FindObjectOfType<Score>();
     }
 
     public void TakeDamage(int damage)
@@ -22,6 +32,8 @@ public class Enemy : MonoBehaviour
         StartCoroutine(Delay(0.2f));
         if(Health <= 0)
         {
+            mannySystem.AddMonny(Random.Range(_minMonnyDrop, _maxMonnyDrop));
+            _score.AddScore(countKill);
             Destroy(gameObject);
         }  
     }

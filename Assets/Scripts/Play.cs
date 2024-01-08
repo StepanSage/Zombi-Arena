@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Play : MonoBehaviour
 {
+   
     public void StartGame(int IDScene)
     {
         SceneManager.LoadScene(IDScene);
     }
+
+   
+
 }
