@@ -5,12 +5,29 @@ using UnityEngine;
 public class OpenHelp : MonoBehaviour
 {
     [SerializeField] private GameObject _helpWindow;
+    [SerializeField] private GameObject _windowsShop;
+
+    private bool _isAction = false;
+
+    private void Update()
+    {
+        if(_isAction == true)
+        {
+            if(Input.GetKeyDown(KeyCode.E)) 
+            {
+                _windowsShop.SetActive(true);
+                Time.timeScale = 0;
+            }
+        }
+        
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             StateWindow(true);
+            _isAction = true;
         }
     }
 
@@ -20,6 +37,7 @@ public class OpenHelp : MonoBehaviour
         {
             StateWindow(false);
             transform.rotation = Quaternion.Euler(0, 0, 0);
+            _isAction = false;
         }
     }
 
