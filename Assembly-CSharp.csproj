@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Logica\Weapon\WeaponAttack.cs" />
     <Compile Include="Assets\Scripts\Logica\Player\Health.cs" />
+    <Compile Include="Assets\Scripts\Logica\Effects\LifeTime.cs" />
     <Compile Include="Assets\Scripts\Logica\Enemy\Move.cs" />
     <Compile Include="Assets\Scripts\Shop\Logica\WeaponInSlot.cs" />
     <Compile Include="Assets\Scripts\Logica\LodingGame\LoadScenes.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\Scripts\Logica\Spawn\Spawner.cs" />
     <Compile Include="Assets\Scripts\Logica\Weapon\WeaponUse.cs" />
     <Compile Include="Assets\Scripts\HelpElement\OpenHelp.cs" />
+    <Compile Include="Assets\Scripts\Logica\Trading\WindowShop.cs" />
     <Compile Include="Assets\Scripts\Logica\SaveGames\SaveGames.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonManagar.cs" />
     <Compile Include="Assets\Scripts\Logica\LodingGame\ExitMainMeny.cs" />
