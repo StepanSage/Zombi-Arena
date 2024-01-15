@@ -65,24 +65,29 @@
     <Compile Include="Assets\Scripts\Logica\Enemy\Move.cs" />
     <Compile Include="Assets\Scripts\Shop\Logica\WeaponInSlot.cs" />
     <Compile Include="Assets\Scripts\Logica\LodingGame\LoadScenes.cs" />
+    <Compile Include="Assets\Scripts\Logica\Camera\Sheping.cs" />
     <Compile Include="Assets\Scripts\Shop\Logica\ChooseWeapon.cs" />
     <Compile Include="Assets\Scripts\Logica\Stairs\Ladder.cs" />
     <Compile Include="Assets\Scripts\Logica\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Logica\Weapon\TakeDamage.cs" />
     <Compile Include="Assets\Scripts\Logica\CounteLogic\MannySystem.cs" />
     <Compile Include="Assets\Scripts\Logica\CounteLogic\RecordsLoad.cs" />
     <Compile Include="Assets\Scripts\Logica\Weapon\ModelWeapone.cs" />
     <Compile Include="Assets\Scripts\Play.cs" />
     <Compile Include="Assets\Scripts\UI\Resizing.cs" />
     <Compile Include="Assets\Scripts\Logica\Enemy\Attack.cs" />
+    <Compile Include="Assets\Scripts\Logica\Weapon\BullionMove.cs" />
     <Compile Include="Assets\Scripts\Logica\CounteLogic\Score.cs" />
     <Compile Include="Assets\Scripts\Shop\Logica\WeapanInfo.cs" />
     <Compile Include="Assets\Scripts\Logica\Spawn\Spawner.cs" />
     <Compile Include="Assets\Scripts\Logica\Weapon\WeaponUse.cs" />
     <Compile Include="Assets\Scripts\HelpElement\OpenHelp.cs" />
+    <Compile Include="Assets\Scripts\Logica\TradingShop\Buy.cs" />
     <Compile Include="Assets\Scripts\Logica\Trading\WindowShop.cs" />
     <Compile Include="Assets\Scripts\Logica\SaveGames\SaveGames.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonManagar.cs" />
     <Compile Include="Assets\Scripts\Logica\LodingGame\ExitMainMeny.cs" />
+    <Compile Include="Assets\Scripts\Logica\Weapon\AttackGun.cs" />
     <Compile Include="Assets\Scripts\Logica\Player\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
