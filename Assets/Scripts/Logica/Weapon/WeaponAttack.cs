@@ -5,65 +5,37 @@ public class WeaponAttack : MonoBehaviour
 {
     [SerializeField] private Animator _attacAmination;
     [SerializeField] private string _nameAnimation;
-    [SerializeField] private int _damag;
-    [SerializeField] private Collider2D _colliders;
+    [SerializeField] private Collider2D _colliders = null;
 
-    [Header("effect Blood")]
-    [SerializeField]
-    private GameObject _effect;
-    [SerializeField] private Transform _spawnEffect;
-
-    [Header("Camera")]
-    [SerializeField] private Animator _cameraAnimator;
-
-    private const string _cameraNameAnim= "Camera";
-   
-               
-    void Update()
+    private void Update()
     {
-        Attack();
+        InputAttack();
     }
-
-    public void Attack()
+    private void InputAttack()
     {
         if (Input.GetMouseButtonDown(0))
         {
+           Attack();
+        }   
+    }
+
+    protected virtual void Attack()
+    {   
             OnCollider();
-            _attacAmination.Play(_nameAnimation);        
-            ShakingCamera();
+            AnimationPlay(); 
+    }   
 
-        }
-        else
-        {
-           
-        }
-    }
-
-    private void ShakingCamera()
+    protected void AnimationPlay()
     {
-        _cameraAnimator.Play(_cameraNameAnim);
+        _attacAmination.Play(_nameAnimation);
     }
 
-    private void OnCollider()
+    protected void OnCollider()
     {
         float times = 1f;
         StartCoroutine(Delay(times));
        
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Enemy"))
-        {      
-            if(collision.GetComponent<Enemy>() != null)
-            {
-                collision.GetComponent<Enemy>().TakeDamage(_damag);
-                Instantiate(_effect, _spawnEffect.position, Quaternion.identity);
-               
-            }
-        }
-    }
-
 
     IEnumerator Delay(float time)
     {
