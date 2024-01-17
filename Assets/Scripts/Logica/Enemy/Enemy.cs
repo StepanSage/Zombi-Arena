@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public int Damag { get; private set; }
 
     [SerializeField] private SpriteRenderer _enemy;
+    [SerializeField] private int _hp;
 
     [Header("Monny"),Space(10)]
     [SerializeField] private MannySystem mannySystem;
@@ -19,7 +20,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        Health = 7;
+        Health = _hp;
         _enemy = GetComponent<SpriteRenderer>();
         mannySystem = FindFirstObjectByType<MannySystem>();
         _score = FindObjectOfType<Score>();

@@ -9,18 +9,66 @@ namespace Scripts.Logica.Spawn
         [SerializeField] private float _minSpawnTime;
 
         [Space(5), Header("SettingSpawn")]
-        [SerializeField] private GameObject _objectPrefab;
+        [SerializeField] private GameObject[] _objectPrefab;
 
         [Space(5), Header("Subtraction")]
         [SerializeField] private float _timeSubtraction;
 
+       
+
+        private Score _score;
+
         public bool isSpawning { get; private set; }
 
+        private void Start()
+        {
+            _score = FindObjectOfType<Score>();
+            
+        }
 
         private void Update()
         {
-            isSpawning = Spawning(_objectPrefab);
-            Debug.Log(isSpawning);
+            VariantSpawn();
+        }
+
+        private void VariantSpawn()
+        {
+            if (_score._currentScore <= 10)
+            {
+                isSpawning = Spawning(_objectPrefab[0]);
+
+            }
+            else if (_score._currentScore > 10 && _score._currentScore <= 30)
+            {
+                int number = RandomProsent();
+
+                if (number <= 4)
+                {
+                    isSpawning = Spawning(_objectPrefab[1]);
+                }
+                else
+                {
+                    isSpawning = Spawning(_objectPrefab[0]);
+                }
+            }
+            else if (_score._currentScore > 30 )
+            {
+                int number = RandomProsent();
+
+                if (number <= 3)
+                {
+                    isSpawning = Spawning(_objectPrefab[1]);
+                }
+                else if (number > 3 && number <= 6)
+                {
+                    isSpawning = Spawning(_objectPrefab[0]);
+                }
+                else if (number > 6)
+                {
+                    isSpawning = Spawning(_objectPrefab[2]);
+                }
+            }
+
         }
 
         private bool Spawning(GameObject Prefab)
@@ -45,6 +93,11 @@ namespace Scripts.Logica.Spawn
 
 
             return false;
+        }
+
+        private int RandomProsent()
+        {
+            return Random.Range(1, 10);
         }
     }
 }
