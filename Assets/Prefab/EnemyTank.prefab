@@ -210,9 +210,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy: {fileID: 0}
+  _hp: 15
   mannySystem: {fileID: 0}
-  _minMonnyDrop: 1
-  _maxMonnyDrop: 10
+  _minMonnyDrop: 10
+  _maxMonnyDrop: 20
 --- !u!1 &3373731034490800013
 GameObject:
   m_ObjectHideFlags: 0

@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 536a0ee5ceadabb4284168ec04d86f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damag: 1
+  _damag: 2
 --- !u!1 &1147751739326518296
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1adbb5e65b777046afbdd9738d71767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 3
   _player: {fileID: 0}
 --- !u!114 &3447642323702716985
 MonoBehaviour:
@@ -354,9 +354,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy: {fileID: 0}
+  _hp: 3
   mannySystem: {fileID: 0}
-  _minMonnyDrop: 1
-  _maxMonnyDrop: 10
+  _minMonnyDrop: 15
+  _maxMonnyDrop: 15
 --- !u!1 &1815489918670996438
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
 {
     [SerializeField] private TMP_Text _scoreText;
 
-    private int _currentScore;
+    public int _currentScore { get; private set; }
 
     private int _highttecord;
 

@@ -641,6 +641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy: {fileID: 0}
+  _hp: 4
   mannySystem: {fileID: 0}
   _minMonnyDrop: 1
   _maxMonnyDrop: 10
