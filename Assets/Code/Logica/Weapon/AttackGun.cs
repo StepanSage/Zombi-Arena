@@ -11,14 +11,23 @@ public class AttackGun : WeaponAttack
     [SerializeField] private float _timeShot;
 
     private float _maxTimeShot;
+    private Ammo _ammo;
 
-    private void Start() => _maxTimeShot = _timeShot;
+    private void Start()
+    {
+        _maxTimeShot = _timeShot;
+        _ammo = FindObjectOfType<Ammo>();
+    }
 
     protected override void Attack()
     {
-        //Timer();
-        SpawnBullion();
-        AnimationPlay();
+        if (_ammo.AmmoCount > 0)
+        {
+            SpawnBullion();
+            AnimationPlay();
+            _ammo.ChangeAmmo(1);
+        }
+       
     }
 
     private void SpawnBullion()
@@ -26,17 +35,5 @@ public class AttackGun : WeaponAttack
         var bullion = Instantiate(_prefab, _pointSpawn.position, Quaternion.identity);
     }
 
-    private void Timer()
-    {
-        if(_timeShot <= 0)
-        {
-           
-            _timeShot = _maxTimeShot;
-        }
-        else
-        {
-            _timeShot -= Time.deltaTime;
-        }
-    }
 
 }
