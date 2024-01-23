@@ -4,6 +4,10 @@ namespace Scripts.Logica.Spawn
 {
     public class Spawner : MonoBehaviour
     {
+        [SerializeField] private bool _isSoloEnemySpawner = false;
+        [SerializeField] private GameObject _prefabEnemySolo = null;
+
+        [Header("Timers")]
         [SerializeField] private float _timeSpawn;
         [SerializeField] private float _maxTimeSpawns;
         [SerializeField] private float _minSpawnTime;
@@ -13,8 +17,6 @@ namespace Scripts.Logica.Spawn
 
         [Space(5), Header("Subtraction")]
         [SerializeField] private float _timeSubtraction;
-
-       
 
         private Score _score;
 
@@ -28,7 +30,24 @@ namespace Scripts.Logica.Spawn
 
         private void Update()
         {
-            VariantSpawn();
+            if(_isSoloEnemySpawner == false)
+            {
+                VariantSpawn();
+            }
+            else
+            {
+                SoloSpawn();
+            }
+           
+        }
+
+        private void SoloSpawn()
+        {
+            if (_score._currentScore > 50)
+            {
+                isSpawning = Spawning(_prefabEnemySolo);
+
+            }
         }
 
         private void VariantSpawn()

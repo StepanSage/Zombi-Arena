@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TakeDamage : MonoBehaviour
 {
+    public static Action DamageText;
+
     [SerializeField] private int _damag;
     [SerializeField] private bool _isGun = false;
 
@@ -21,8 +24,10 @@ public class TakeDamage : MonoBehaviour
             if (collision.GetComponent<Enemy>() != null)
             {
                 collision.GetComponent<Enemy>().TakeDamage(_damag);
+                collision.GetComponent<Enemy>().GetComponentInChildren<DamagText>().DamageBling();
                 Instantiate(_effect, _spawnEffect.position, Quaternion.identity);
                 _shepingCamera.ShakingCamera();
+               
 
                 if(_isGun == true)
                 {
@@ -31,4 +36,6 @@ public class TakeDamage : MonoBehaviour
             }
         }
     }
+
+    
 }
