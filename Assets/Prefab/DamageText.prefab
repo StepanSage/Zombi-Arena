@@ -148,4 +148,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offsetPositionY: 300
-  _durationTime: 1
+  _timeToDestroy: 0.9
