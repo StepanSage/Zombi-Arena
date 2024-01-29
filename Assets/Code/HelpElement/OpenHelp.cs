@@ -17,6 +17,7 @@ public class OpenHelp : MonoBehaviour
             {
                 _windowsShop.SetActive(true);
                 Time.timeScale = 0;
+                PauseGame.SetPause(true);
             }
         }
         
