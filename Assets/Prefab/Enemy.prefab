@@ -744,7 +744,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  _player: {fileID: 0}
 --- !u!114 &1729796193477927805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,8 +756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169d1351086750543a75bc23818c37da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 0}
   _hp: 4
-  mannySystem: {fileID: 0}
   _minMonnyDrop: 1
   _maxMonnyDrop: 10

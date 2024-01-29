@@ -13,10 +13,14 @@ public class WeaponAttack : MonoBehaviour
     }
     private void InputAttack()
     {
-        if (Input.GetMouseButtonDown(0))
+        if(PauseGame._isPause == false)
         {
-           Attack();
-        }   
+            if (Input.GetMouseButtonDown(0))
+            {
+                Attack();
+            }
+        }
+         
     }
 
     protected virtual void Attack()

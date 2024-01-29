@@ -85,6 +85,7 @@
     <Compile Include="Assets\Code\Logica\Enemy\Move.cs" />
     <Compile Include="Assets\Code\Shop\Logica\WeaponInSlot.cs" />
     <Compile Include="Assets\Code\Logica\Effects\LifeTime.cs" />
+    <Compile Include="Assets\Code\Logica\Pause\PauseGame.cs" />
     <Compile Include="Assets\Code\Logica\Trading\WindowShop.cs" />
     <Compile Include="Assets\Code\Shop\Logica\ChooseWeapon.cs" />
     <Compile Include="Assets\Code\Logica\Weapon\BullionMove.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Code\Logica\SaveGames\SaveGames.cs" />
     <Compile Include="Assets\Code\Logica\Stairs\Ladder.cs" />
     <Compile Include="Assets\Code\Logica\Spawn\Spawner.cs" />
+    <Compile Include="Assets\Code\Logica\Enemy\MoveSlime.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

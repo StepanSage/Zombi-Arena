@@ -27,21 +27,30 @@ public class Enemy : MonoBehaviour
         _enemy = GetComponent<SpriteRenderer>();
         mannySystem = FindFirstObjectByType<MannySystem>();
         _score = FindObjectOfType<Score>();
-        //_damagText = gameObject.GetComponentInChildren<DamagText>();
+        
     }
 
     public void TakeDamage(int damage)
     {
         Health -= damage;
-        _enemy.color = new Vector4(1f, 0.165f, 0.165f, 1f);
-        //_damagText.DamageBling();
+        EffectTakeDamage();
         StartCoroutine(Delay(0.2f));
-        if(Health <= 0)
+        DeadEnemy();
+    }
+
+    private void EffectTakeDamage()
+    {
+        _enemy.color = new Vector4(1f, 0.165f, 0.165f, 1f);
+    }
+
+    protected virtual void DeadEnemy()
+    {
+        if (Health <= 0)
         {
             mannySystem.AddMonny(Random.Range(_minMonnyDrop, _maxMonnyDrop));
             _score.AddScore(countKill);
             Destroy(gameObject);
-        }  
+        }
     }
 
     private IEnumerator Delay(float time)
