@@ -6,6 +6,7 @@ namespace Scripts.Logica.Spawn
     {
         [SerializeField] private bool _isSoloEnemySpawner = false;
         [SerializeField] private GameObject _prefabEnemySolo = null;
+        [SerializeField] private bool _isRotation;
 
         [Header("Timers")]
         [SerializeField] private float _timeSpawn;
@@ -95,6 +96,11 @@ namespace Scripts.Logica.Spawn
             if (_timeSpawn < 0)
             {
                 var prefab = Instantiate(Prefab, transform.position, Quaternion.identity);
+
+                if(_isRotation == true)
+                {
+                    prefab.transform.Rotate(0, -180, 0);
+                }
 
                 _timeSpawn = _maxTimeSpawns;
 
