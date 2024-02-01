@@ -36,6 +36,7 @@ public class Health : MonoBehaviour
         }
         else
         {
+            _health = _maxHealth;
             _slider.value = _maxHealth;
         }
     }
