@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8618915364854267066}
   - component: {fileID: 8123721434132148489}
   - component: {fileID: 5507332208444568301}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemyTank
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.01, y: 0.7212, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.22322372, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7913170233164455339}
@@ -222,7 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481209825304514003}
   - component: {fileID: 844455692919361647}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\u0432\u0440\u0430\u0433_1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 3587871850021594535}
   - component: {fileID: 1731261963436243521}
   - component: {fileID: 2530642453701310526}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422,7 +422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1164042438853178367}
   - component: {fileID: 6991884579287211154}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\u0432\u0440\u0430\u0433_0 (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3211883077641337128}
   - component: {fileID: 5091034469406362012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\u0432\u0440\u0430\u0433_0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 7116775143041604923}
   - component: {fileID: 5527436293775224124}
   - component: {fileID: 8486840817605816708}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\u0432\u0440\u0430\u0433_2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +733,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7913170233164455339}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
