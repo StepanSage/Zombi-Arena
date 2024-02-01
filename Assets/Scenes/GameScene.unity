@@ -549,7 +549,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.18039216, g: 0.13333334, b: 0.18039216, a: 1}
   m_FlipX: 0
@@ -1418,7 +1418,7 @@ GameObject:
   - component: {fileID: 383630369}
   - component: {fileID: 383630370}
   m_Layer: 0
-  m_Name: "\u043E\u0440\u0443\u0436\u0438\u0435 \u043F\u0430\u043A \u0434\u0432\u0430_12"
+  m_Name: knift
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1802,7 +1802,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440722214}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -7485,7 +7485,7 @@ GameObject:
   - component: {fileID: 536423980}
   - component: {fileID: 536423981}
   m_Layer: 0
-  m_Name: "2 \u043C\u0435\u0447"
+  m_Name: Two Swords
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8127,7 +8127,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1816552363, guid: 6242c45c2fce81b4c81c5cbe92967af5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8875,7 +8875,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1816552363, guid: 6242c45c2fce81b4c81c5cbe92967af5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9736,7 +9736,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1816552363, guid: 6242c45c2fce81b4c81c5cbe92967af5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
