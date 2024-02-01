@@ -9437,7 +9437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isSoloEnemySpawner: 1
-  _prefabEnemySolo: {fileID: 842587717311083873, guid: 1ce170ee32fb3af43bb75191b56370b4, type: 3}
+  _prefabEnemySolo: {fileID: 4612750161204053368, guid: 6187200a6d0ebee42814ddf33496183b, type: 3}
   _isRotation: 0
   _timeSpawn: 10
   _maxTimeSpawns: 10
