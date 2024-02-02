@@ -7,7 +7,7 @@ public class TakeDamage : MonoBehaviour
 {
     public static Action<int> DamageTextAction;
 
-    [SerializeField] private int _damag;
+    public int _damag;
     [SerializeField] private bool _isGun = false;
 
     [SerializeField] private GameObject _effect;

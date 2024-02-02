@@ -6,6 +6,7 @@ public class AttackGun : WeaponAttack
 {
     [SerializeField] private GameObject _prefab;
     [SerializeField] private Transform _pointSpawn;
+    [SerializeField] private int Damage;
 
     [Header("Timer")]
     [SerializeField] private float _timeShot;
@@ -15,6 +16,7 @@ public class AttackGun : WeaponAttack
 
     private void Start()
     {
+        
         _maxTimeShot = _timeShot;
         _ammo = FindObjectOfType<Ammo>();
     }
@@ -33,6 +35,7 @@ public class AttackGun : WeaponAttack
     private void SpawnBullion()
     {
         var bullion = Instantiate(_prefab, _pointSpawn.position, Quaternion.identity);
+        bullion.GetComponent<TakeDamage>()._damag = Damage;
     }
 
 
